@@ -1,0 +1,5 @@
+﻿  Bruon_project.cpp
+c:\users\павел\desktop\physic\bruon_project\bruon_project\bruon_project.cpp(93): warning C4838: преобразование из "int" в "float" требует сужающего преобразования
+c:\users\павел\desktop\physic\bruon_project\bruon_project\bruon_project.cpp(93): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+  Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\Bruon_project\Debug\Bruon_project.exe
+  Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\Bruon_project\Debug\Bruon_project.pdb (Full PDB)

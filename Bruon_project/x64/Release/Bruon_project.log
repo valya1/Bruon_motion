@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  Bruon_project.cpp
+Bruon_project.cpp(93): warning C4838: преобразование из "int" в "float" требует сужающего преобразования
+Bruon_project.cpp(93): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+LINK : fatal error LNK1104: не удается открыть файл "glut32.lib"

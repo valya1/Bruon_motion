@@ -1,0 +1,10 @@
+﻿  Bruon_project.cpp
+Bruon_project.cpp(93): warning C4838: преобразование из "int" в "float" требует сужающего преобразования
+Bruon_project.cpp(93): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+  Создание кода
+  2 of 91 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\Bruon_project\Release\Bruon_project.exe
+  Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\Bruon_project\Release\Bruon_project.pdb (Full PDB)
