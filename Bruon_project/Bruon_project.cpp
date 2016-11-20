@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include <glut.h>
+#include<glut.h>
 #include <vector>
 #include<ctime>
 #include <omp.h>
@@ -41,11 +41,11 @@ void display()
 			glBegin(GL_LINES);
 			for (int a = 0; a < 72; a++)
 			{
-				float x = i.m*cos(a*M_PI / 36);
-				float y = i.m*sin(a*M_PI / 36);
+				float x = sqrt(i.m)*cos(a*M_PI / 36);
+				float y = sqrt(i.m)*sin(a*M_PI / 36);
 				glVertex2f(i.x+x, i.y+y);
-				x = i.m*cos((a + 1)*M_PI / 36);
-				y = i.m*sin((a + 1)*M_PI / 36);
+				x = sqrt(i.m)*cos((a + 1)*M_PI / 36);
+				y = sqrt(i.m)*sin((a + 1)*M_PI / 36);
 				glVertex2f(i.x+x, i.y+y);
 			}
 			glEnd();
@@ -62,13 +62,14 @@ void timer(int = 0)
 			if (i!=j)
 			{
 				float d = sqrt((i->x - j->x) * (i->x - j->x) + (i->y - j->y) * (i->y - j->y));
-				if (d < i->m + j->m)
+				if (d < sqrt(i->m) + sqrt(j->m))
 				{
-					float f = 100 * (i->m + j->m - d);
+					float f = 100 * (sqrt(i->m) + sqrt(j->m) - d);
 					i->vx += f * (i->x - j->x) / d / i->m * DT;
 					i->vy += f * (i->y - j->y) / d / i->m * DT;
 					j->vx -= f * (i->x - j->x) / d / j->m * DT;
 					j->vy -= f * (i->y - j->y) / d / j->m * DT;
+			
 				}
 			}
 	#pragma parallel for
@@ -90,7 +91,7 @@ int main(int argc, char **argv)
 	srand(0);
 	for (int i = 0; i < 200; i++)
 	{
-		Particle particle = { rand() % 1366, rand() % 768, rand() % 100000 / 500.0 - 10 , rand() % 100000 / 500.0 - 10, 6};
+		Particle particle = { rand() % 1360, rand() % 760, rand() % 10000 / 500.0 - 10 , rand() % 10000 / 500.0 - 10, 20};
 		p.push_back(particle);
 	}
 	glutInit(&argc, argv);

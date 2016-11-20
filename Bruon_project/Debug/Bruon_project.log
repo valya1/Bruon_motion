@@ -1,16 +1,3 @@
-﻿Сборка начата 20.11.2016 16:52:06.
-     1>Проект "C:\Users\Семья\Desktop\Проги\brown\Bruon_project\Bruon_project.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yu"stdafx.h" /Fp"Debug\Bruon_project.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bruon_project.cpp
-         Bruon_project.cpp
-     1>c:\users\семья\desktop\проги\brown\bruon_project\bruon_project.cpp(60): warning C4068: неизвестная директива pragma
-     1>c:\users\семья\desktop\проги\brown\bruon_project\bruon_project.cpp(75): warning C4068: неизвестная директива pragma
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Семья\Desktop\Проги\brown\Debug\Bruon_project.exe" /INCREMENTAL /NOLOGO opengl32.lib glut32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Семья\Desktop\Проги\brown\Debug\Bruon_project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Семья\Desktop\Проги\brown\Debug\Bruon_project.lib" /MACHINE:X86 Debug\Bruon_project.obj
-         Debug\stdafx.obj
-         Bruon_project.vcxproj -> C:\Users\Семья\Desktop\Проги\brown\Debug\Bruon_project.exe
-     1>Сборка проекта "C:\Users\Семья\Desktop\Проги\brown\Bruon_project\Bruon_project.vcxproj" завершена (целевые объекты Build).
-
-Сборка успешно завершена.
-
-Затраченное время: 00:00:00.47
+﻿  stdafx.cpp
+  Bruon_project.cpp
+c:\users\павел\desktop\physic\brown\bruon_project\bruon_project.cpp(5): fatal error C1083: Не удается открыть файл включение: glut.h: No such file or directory
