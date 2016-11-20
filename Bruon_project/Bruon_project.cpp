@@ -55,7 +55,7 @@ void display()
 }
 void timer(int = 0)
 {
-	for (auto i = p.begin(); i!=p.end();i++)
+ 	for (auto i = p.begin(); i!=p.end();i++)
 		for (auto j = p.begin(); j!=p.end();j++)
 			if (i!=j)
 			{
@@ -71,16 +71,23 @@ void timer(int = 0)
 			}
 	for (auto i = p.begin(); i != p.end(); ++i)
 	{
+		if ((i->x - i->m < 0) || (i->x + i->m >1366))
+			i->vx = -i->vx;
+		if ((i->y - i->m < 0) || (i->y + i->m >768))
+			i->vy = -i->vy;
+	}
+	for (auto i = p.begin(); i != p.end(); ++i)
+	{
 		i->x += i->vx * DT;
 		i->y += i->vy * DT;
-		if (i->x < 0)
-			i->x += 480;
-		if (i->y < 0)
-			i->y += 480;
-		if (i->x > 480)
-			i->x -= 480;
-		if (i->y > 480)
-			i->y -= 480;
+		if (i->x - i->m < 0)
+			i->x += 1366;
+		if (i->y - i->m < 0)
+			i->y += 768;
+		if (i->x + i->m > 1366)
+			i->x -= 1366;
+		if (i->y + i->m > 768)
+			i->y -= 768;
 	}
 	display();
 	glutTimerFunc(10, timer, 0);
@@ -88,20 +95,21 @@ void timer(int = 0)
 
 int main(int argc, char **argv)
 {
+	srand(0);
 	for (int i = 0; i < 50; i++)
 	{
-		Particle particle = { rand() % 480, rand() % 480, rand() % 10000 / 500.0 - 10 , rand() % 10000 / 500.0 - 10, rand()%5 +1};
+		Particle particle = { rand() % 1366, rand() % 768, rand() % 10000 / 500.0 - 10 , rand() % 10000 / 500.0 - 10, 4};
 		p.push_back(particle);
 	}
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-	glutInitWindowSize(480, 480);
+	glutInitWindowSize(1366, 768);
 	glutInitWindowPosition(20, 1050 - 480 - 20);
 	glutCreateWindow("Brownian motion");
-	glClearColor(0, 0, 0, 1.0);
+	glClearColor(0.1, 0.3, 0.3, 1.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, 480, 480, 0, -1, 1);
+	glOrtho(0, 1366, 768, 0, -1, 1);
 	glutDisplayFunc(display);
 	timer();
 	glutMainLoop();
