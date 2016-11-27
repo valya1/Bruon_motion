@@ -1,12 +1,13 @@
 ﻿  Bruon_project.cpp
-Bruon_project.cpp(59): warning C4068: неизвестная директива pragma
-Bruon_project.cpp(75): warning C4068: неизвестная директива pragma
-Bruon_project.cpp(94): warning C4838: преобразование из "int" в "float" требует сужающего преобразования
-Bruon_project.cpp(94): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+Bruon_project.cpp(68): warning C4018: <: несоответствие типов со знаком и без знака
+Bruon_project.cpp(69): warning C4018: <: несоответствие типов со знаком и без знака
+Bruon_project.cpp(83): warning C4018: <: несоответствие типов со знаком и без знака
+Bruon_project.cpp(103): warning C4838: преобразование из "int" в "float" требует сужающего преобразования
+Bruon_project.cpp(103): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
   Создание кода
-  1 of 91 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
+  1 of 90 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\brown\Release\Bruon_project.exe
   Bruon_project.vcxproj -> C:\Users\Павел\Desktop\Physic\brown\Release\Bruon_project.pdb (Full PDB)
